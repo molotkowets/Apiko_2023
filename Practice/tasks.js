@@ -16,3 +16,20 @@ printPowsOf2("302");
 printPowsOf2(null);
 printPowsOf2(128);
 printPowsOf2(60);
+
+////////// lesson 10 task 2
+
+function calculateSumOfArray() {
+  let sum = 0;
+  const initialArray = [3, 2, "2", null, 1.5, 9.5, undefined];
+  for (let i = 0; i < initialArray.length; i++) {
+    // console.log(initialArray);
+
+    if (typeof initialArray[i] == "number") {
+      sum += initialArray[i];
+    }
+  }
+  console.log(sum);
+}
+
+calculateSumOfArray();
