@@ -36,28 +36,38 @@
 
 ////////// lesson 10 task 3
 
-function printSeasonByMonth(month) {
-  const seasons = {
-    winter: ["DECEMBER", "JANUARY", "FEBRUARY"],
-    spring: ["MARCH", "APRIL", "MAY"],
-    summer: ["JUNE", "JULY", "AUGUST"],
-    fall: ["SEPTEMBER", "OCTOBER", "NOVEMBER"],
-  };
+// function printSeasonByMonth(month) {
+//   const seasons = {
+//     winter: ["DECEMBER", "JANUARY", "FEBRUARY"],
+//     spring: ["MARCH", "APRIL", "MAY"],
+//     summer: ["JUNE", "JULY", "AUGUST"],
+//     fall: ["SEPTEMBER", "OCTOBER", "NOVEMBER"],
+//   };
 
-  const namesSeasons = Object.keys(seasons);
+//   const namesSeasons = Object.keys(seasons);
 
-  for (let i = 0; i < namesSeasons.length; i++) {
-    if (seasons[namesSeasons[i]].includes(month.toUpperCase())) {
-      console.log(namesSeasons[i]);
-      break;
-    } else if (i === namesSeasons.length - 1) {
-      console.log("invalid month");
-    }
-  }
+//   for (let i = 0; i < namesSeasons.length; i++) {
+//     if (seasons[namesSeasons[i]].includes(month.toUpperCase())) {
+//       console.log(namesSeasons[i]);
+//       break;
+//     } else if (i === namesSeasons.length - 1) {
+//       console.log("invalid month");
+//     }
+//   }
+// }
+
+// printSeasonByMonth("SEPTEMBER");
+// printSeasonByMonth("NOVEMBER");
+// printSeasonByMonth("MAi"); // error test
+// printSeasonByMonth("July");
+// printSeasonByMonth("APRIL");
+
+////////// lesson 10 task 4
+// .join(" ")
+function calculateWordsInString(string) {
+  console.log(string.replace(/[\s.,%,?]/g, " ").split(/\s+/).length);
 }
-
-printSeasonByMonth("SEPTEMBER");
-printSeasonByMonth("NOVEMBER");
-printSeasonByMonth("MAi"); // error test
-printSeasonByMonth("July");
-printSeasonByMonth("APRIL");
+calculateWordsInString("Easy   string for count");
+calculateWordsInString("Easy");
+calculateWordsInString("Some string with a triple   space");
+calculateWordsInString("Some?  string, with a triple   space");
